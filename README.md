@@ -10,7 +10,7 @@ npm install
 npm run serve
 ```
 
-### starting server 
+### Starting server 
 ```
 cd server
 node server.js
