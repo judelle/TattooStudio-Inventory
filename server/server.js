@@ -94,6 +94,21 @@ app.post('/api/materials', (req, res) => {
     });
 });
 
+app.delete('/api/materials/:id', (req, res) => {
+  const { id } = req.params;
+
+  db.run("DELETE FROM materials WHERE id = ?", [id], function(err) {
+    if (err) {
+      res.status(400).json({ "error": err.message });
+      return;
+    }
+    res.json({
+      "message": "success",
+      "data": { id: id }
+    });
+  });
+});
+
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

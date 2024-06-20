@@ -1,5 +1,13 @@
 <template>
   <div id="app">
+    <nav>
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Материалы</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
     <MaterialsList />
   </div>
 </template>

@@ -17,3 +17,7 @@ export const updateMaterial = (id, quantityUsed) => {
 export const increaseMaterial = (id, quantityIncreased) => {
   return axios.patch(`${API_URL}/materials/${id}/increase`, { quantityIncreased });
 };
+
+export const deleteMaterial = (id) => {
+  return axios.delete(`${API_URL}/materials/${id}`);
+};
