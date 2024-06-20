@@ -3,6 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+.nav-link {
+  margin-right: 10px;
+  text-decoration: none;
+    color: #63452f;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+color: #000;
+    border-radius: 5px;
+    background-color: rgb(255, 241, 223);
+    box-shadow: 0 0 8px  rgba(0, 0, 0, 0.2);
+}
+
 nav {
     position: fixed;
     width: 100%;

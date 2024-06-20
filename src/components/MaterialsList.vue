@@ -85,7 +85,7 @@ export default {
 <style scoped>
 .box {
   min-height: 100vh;
-  padding-top: 50px;
+  padding-top: 30px;
   width: 100%;
   height: 100%;
   background-color: rgb(255, 241, 223);
