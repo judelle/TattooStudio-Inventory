@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style scoped>
-/* Ваши стили */
+
 </style>

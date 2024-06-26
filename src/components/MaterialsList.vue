@@ -9,6 +9,7 @@
       </form>
     </header>
     <main>
+      <div class="count">Упаковок</div>
       <ul class="MaterialList">
         <li v-for="material in materials" :key="material.id" class="MaterialItem">
           {{ material.name }} - {{ material.quantity }}
@@ -83,13 +84,6 @@ export default {
 </script>
 
 <style scoped>
-.box {
-  min-height: 100vh;
-  padding-top: 30px;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 241, 223);
-}
 
 li {
   font-size: 17px;
@@ -105,21 +99,26 @@ header {
 }
 
 .MaterialList {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 0;
+  list-style-type: none;
 }
 
 .MaterialItem {
-  padding-top: 10px;
+  border: 1px solid #ce9369;
+  padding: 4px 30px 4px 20px;
+  border-radius: 40px;
+
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  align-content: space-between;
   flex-direction: row;
+  background-color: #fae6d7;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 button {
@@ -167,5 +166,18 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.count {
+  text-align: center;
+}
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.filters button {
+  margin: 0 5px;
 }
 </style>
